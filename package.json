@@ -1,0 +1,24 @@
+{
+  "name": "rhcp",
+  "version": "1.0.0",
+  "description": "Just a site dedicated to RHCP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/McColgan/RHCP.git"
+  },
+  "author": "Liam McColgan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/McColgan/RHCP/issues"
+  },
+  "homepage": "https://github.com/McColgan/RHCP#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
