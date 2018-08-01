@@ -10,3 +10,15 @@ html,body{
     position: relative;
     background: $color-black;
 }
+
+.site_logo{
+    position: absolute;
+    top: 22px;
+    left: 50px;
+    width: 150px;
+    height: 40px;
+    background-image: url(../images/rhcp_text.png);
+    background-size: 150px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+}

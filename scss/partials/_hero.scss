@@ -1,0 +1,133 @@
+.hero_container{
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.hero_bg{
+    background-image: url(../images/rhcp_bg_1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.hero_overlay{
+    position: absolute;
+    width: 100vw;
+    height: 500px;
+    background-image: url(../images/rhcp_bg_2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    //background: #923030;
+    z-index: 1;
+    top: 0;
+    -webkit-clip-path: polygon(0 0, 0 95%, 10% 100%, 20% 91%, 37% 93%, 52% 98%, 66% 89%, 84% 100%, 100% 91%, 100% 0);
+    clip-path: polygon(0 0, 0 95%, 10% 100%, 20% 91%, 37% 93%, 52% 98%, 66% 89%, 84% 100%, 100% 91%, 100% 0);
+    &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(rgba(20, 20, 20, 0.5),rgba(180, 126, 126, 0.1),rgba(20, 20, 20, 0));
+    }
+}
+.rhcp_logo_container{
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    z-index: 2;
+    background-image: url(../images/rhcp_logo_svg.png);
+    background-size: 250px 251px;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -10px;
+    -webkit-animation: rotation 10s infinite linear;
+    animation: rotation 10s infinite linear;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg),
+    }
+    to {
+        transform: rotate(359deg),
+    }                   
+}
+
+.hero_info_container{
+    z-index: 2;
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: auto;
+    background: $color-black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 0;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 3px;
+        height: 60px;
+        left: 50%;
+        top: -50px;
+        background: $color-black;
+        //transform: rotate(-90deg);
+        transform: translateX(-50%);
+    }
+    .hero_info_box{
+        //background: salmon;
+        font-family: 'Special Elite', monospace;
+        font-size: 1.3em;
+        max-width: 150px;
+        text-align: center;
+        .rhcp_info_logo{
+            width: 50px;
+            height: 50px;
+            background-image: url(../images/rhcp_logo_star.png);
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+// Promo video
+.promo_video_outer{
+    position: absolute;
+    width: 70%;
+    max-width: 900px;
+    height: 550px;
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/rhcp_bg_early.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 2;
+    top: 730px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-clip-path: polygon(9% 3%, 44% 3%, 80% 0, 96% 4%, 99% 12%, 96% 55%, 97% 83%, 77% 100%, 45% 95%, 16% 98%, 5% 87%, 2% 69%, 4% 39%, 1% 12%);
+    clip-path: polygon(9% 3%, 44% 3%, 80% 0, 96% 4%, 99% 12%, 96% 55%, 97% 83%, 77% 100%, 45% 95%, 16% 98%, 5% 87%, 2% 69%, 4% 39%, 1% 12%);
+    .promo_video_container{
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        border: 3px solid $color-red;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}

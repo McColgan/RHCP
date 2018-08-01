@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Gamja+Flower|Nanum+Pen+Script|Special+Elite|Sue+Ellen+Francisco");
 html, body {
   font-size: 16px;
   z-index: 0;
@@ -9,3 +10,266 @@ html, body {
   font-family: 'Montserrat', sans-serif;
   position: relative;
   background: #141414; }
+
+.site_logo {
+  position: absolute;
+  top: 22px;
+  left: 50px;
+  width: 150px;
+  height: 40px;
+  background-image: url(../images/rhcp_text.png);
+  background-size: 150px 40px;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.header_container {
+  position: fixed;
+  width: 100vw;
+  max-width: 1000px;
+  height: 70px;
+  top: 0;
+  z-index: 100;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.nav_container {
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  background: rgba(20, 20, 20, 0.9); }
+  .nav_container li {
+    height: 20vh;
+    list-style: none; }
+    .nav_container li a {
+      color: #f3f3f3;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      text-decoration: none;
+      font-size: 2em;
+      font-family: 'Sue Ellen Francisco',serif;
+      transition: 350ms ease-in-out;
+      text-decoration: none; }
+      .nav_container li a:hover {
+        color: #e62424; }
+
+@media (min-width: 800px) {
+  .nav_container {
+    position: absolute;
+    height: 70px;
+    flex-direction: row;
+    margin: 0 auto;
+    width: auto;
+    right: 30px;
+    background: none; }
+    .nav_container li {
+      height: 100%;
+      margin: auto 1em; }
+      .nav_container li a {
+        font-size: 2em;
+        padding: 0;
+        margin: auto;
+        letter-spacing: 0.1em; }
+  #nav_icon {
+    display: none; } }
+
+.nav_container--open {
+  height: auto; }
+
+#nav_icon {
+  width: 45px;
+  height: 30px;
+  position: absolute;
+  right: 1em;
+  top: 0.3em;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 400ms ease-in-out;
+  -moz-transition: 400ms ease-in-out;
+  -o-transition: 400ms ease-in-out;
+  transition: 400ms ease-in-out;
+  cursor: pointer;
+  z-index: 2;
+  padding: 0.7em; }
+
+#nav_icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 77%;
+  border-radius: 5px;
+  opacity: 1;
+  left: 7px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .4s ease-in-out;
+  -moz-transition: .4s ease-in-out;
+  -o-transition: .4s ease-in-out;
+  transition: .4s ease-in-out; }
+
+#nav_icon span:nth-child(1) {
+  top: 9px;
+  background-color: #f3f3f3; }
+
+#nav_icon span:nth-child(2) {
+  top: 24px;
+  background-color: #f3f3f3; }
+
+#nav_icon span:nth-child(3) {
+  top: 39px;
+  background-color: #f3f3f3; }
+
+#nav_icon.open {
+  background: none; }
+
+#nav_icon.open span:nth-child(1) {
+  top: 24px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  background: #f3f3f3; }
+
+#nav_icon.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px; }
+
+#nav_icon.open span:nth-child(3) {
+  top: 24px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  background: #f3f3f3; }
+
+.hero_container {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
+.hero_bg {
+  background-image: url(../images/rhcp_bg_1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.hero_overlay {
+  position: absolute;
+  width: 100vw;
+  height: 500px;
+  background-image: url(../images/rhcp_bg_2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  top: 0;
+  -webkit-clip-path: polygon(0 0, 0 95%, 10% 100%, 20% 91%, 37% 93%, 52% 98%, 66% 89%, 84% 100%, 100% 91%, 100% 0);
+  clip-path: polygon(0 0, 0 95%, 10% 100%, 20% 91%, 37% 93%, 52% 98%, 66% 89%, 84% 100%, 100% 91%, 100% 0); }
+  .hero_overlay::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(180, 126, 126, 0.1), rgba(20, 20, 20, 0)); }
+
+.rhcp_logo_container {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  z-index: 2;
+  background-image: url(../images/rhcp_logo_svg.png);
+  background-size: 250px 251px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: -10px;
+  -webkit-animation: rotation 10s infinite linear;
+  animation: rotation 10s infinite linear; }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+
+.hero_info_container {
+  z-index: 2;
+  position: absolute;
+  top: 420px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 450px;
+  height: auto;
+  background: #141414;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 5px 0; }
+  .hero_info_container::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 60px;
+    left: 50%;
+    top: -50px;
+    background: #141414;
+    transform: translateX(-50%); }
+  .hero_info_container .hero_info_box {
+    font-family: 'Special Elite', monospace;
+    font-size: 1.3em;
+    max-width: 150px;
+    text-align: center; }
+    .hero_info_container .hero_info_box .rhcp_info_logo {
+      width: 50px;
+      height: 50px;
+      background-image: url(../images/rhcp_logo_star.png);
+      background-size: 50px 50px;
+      background-repeat: no-repeat;
+      background-position: center; }
+
+.promo_video_outer {
+  position: absolute;
+  width: 70%;
+  max-width: 900px;
+  height: 550px;
+  margin: 0;
+  padding: 0;
+  background-image: url(../images/rhcp_bg_early.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 2;
+  top: 730px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-clip-path: polygon(9% 3%, 44% 3%, 80% 0, 96% 4%, 99% 12%, 96% 55%, 97% 83%, 77% 100%, 45% 95%, 16% 98%, 5% 87%, 2% 69%, 4% 39%, 1% 12%);
+  clip-path: polygon(9% 3%, 44% 3%, 80% 0, 96% 4%, 99% 12%, 96% 55%, 97% 83%, 77% 100%, 45% 95%, 16% 98%, 5% 87%, 2% 69%, 4% 39%, 1% 12%); }
+  .promo_video_outer .promo_video_container {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    border: 3px solid #e62424;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
