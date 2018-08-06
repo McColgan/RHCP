@@ -1,0 +1,55 @@
+.img_section_outer{
+    position: relative;
+    width: 100vw;
+    height: 500px;
+    padding: 0;
+    margin: 0;
+    z-index: -1;
+}
+.img_container{
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    //margin-top: -70px;
+}
+.flea_img{
+    background-image: url(../images/flea.png);
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.anthony_img{
+    background-image: url(../images/anthony_kiedis.png);
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+.chad_img{
+    background-image: url(../images/chad_smith.png);
+}
+.josh_img{
+    background-image: url(../images/josh_klinghoffer.png);
+    background-position: top center;
+}
+.john_img{
+    background-image: url(../images/john_4_greyscale.png);
+}
+
+.info_float{
+    left: 10%;
+} 
+.img_section_info{
+    position: absolute;
+    top: 2em;
+    right: 10%;
+    h1{
+        font-size: 5em;
+        padding: 0;
+        margin: 1em auto 0 auto;
+    }
+    p{
+        font-size: 2em;
+        font-family: 'Special Elite',sans-serif;
+    }
+}

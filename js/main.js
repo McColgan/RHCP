@@ -4,4 +4,21 @@ $(document).ready(function(){
         $('.nav_container').toggleClass('nav_container--open', 300);
         $(this).toggleClass('open');
     });
+
+    //Hiding header on scroll
+    let prevScrollPos = window.pageYOffset;
+    let screenWidth = window.matchMedia( "(min-width: 800px)" );
+    
+    if (screenWidth.matches){
+         window.onscroll = function(){
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos){
+                document.getElementById("header_container").style.top = "0";
+            } else{
+                document.getElementById("header_container").style.top = "-70px";
+            }
+        
+            prevScrollPos = currentScrollPos;
+            }
+        }
 });

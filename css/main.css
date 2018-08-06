@@ -22,16 +22,18 @@ html, body {
   background-repeat: no-repeat;
   background-position: center; }
 
-.header_container {
+#header_container {
   position: fixed;
   width: 100vw;
-  max-width: 1000px;
   height: 70px;
   top: 0;
   z-index: 100;
   margin: auto;
   left: 50%;
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+  transition: top 500ms;
+  -webkit-clip-path: none;
+  clip-path: none; }
 
 .nav_container {
   top: 0;
@@ -55,13 +57,17 @@ html, body {
       margin: 0 auto;
       text-decoration: none;
       font-size: 2em;
-      font-family: 'Sue Ellen Francisco',serif;
+      font-family: 'Special Elite',serif;
       transition: 350ms ease-in-out;
       text-decoration: none; }
       .nav_container li a:hover {
         color: #e62424; }
 
 @media (min-width: 800px) {
+  #header_container {
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 56% 100%, 46% 78%, 28% 77%, 21% 93%, 9% 80%, 5% 90%, 0 86%, 0 0);
+    clip-path: polygon(100% 0, 100% 100%, 50% 100%, 46% 78%, 28% 77%, 21% 93%, 9% 80%, 5% 90%, 0 86%, 0 0);
+    background: rgba(0, 0, 0, 0.5); }
   .nav_container {
     position: absolute;
     height: 70px;
@@ -74,7 +80,7 @@ html, body {
       height: 100%;
       margin: auto 1em; }
       .nav_container li a {
-        font-size: 2em;
+        font-size: 1.2em;
         padding: 0;
         margin: auto;
         letter-spacing: 0.1em; }
@@ -154,10 +160,15 @@ html, body {
   transform: rotate(-135deg);
   background: #f3f3f3; }
 
+.footer_container {
+  position: relative;
+  width: 100vw;
+  height: 100px; }
+
 .hero_container {
   position: relative;
   width: 100%;
-  height: 200vh;
+  height: 1400px;
   margin: 0;
   padding: 0;
   overflow: hidden; }
@@ -184,14 +195,6 @@ html, body {
   top: 0;
   -webkit-clip-path: polygon(0 0, 0 95%, 10% 100%, 20% 91%, 37% 93%, 52% 98%, 66% 89%, 84% 100%, 100% 91%, 100% 0);
   clip-path: polygon(0 0, 0 95%, 10% 100%, 20% 91%, 37% 93%, 52% 98%, 66% 89%, 84% 100%, 100% 91%, 100% 0); }
-  .hero_overlay::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(rgba(20, 20, 20, 0.5), rgba(180, 126, 126, 0.1), rgba(20, 20, 20, 0)); }
 
 .rhcp_logo_container {
   position: absolute;
@@ -203,8 +206,8 @@ html, body {
   background-position: center;
   background-repeat: no-repeat;
   top: -10px;
-  -webkit-animation: rotation 10s infinite linear;
-  animation: rotation 10s infinite linear; }
+  -webkit-animation: rotation 6s infinite linear;
+  animation: rotation 6s infinite linear; }
 
 @keyframes rotation {
   from {
@@ -230,7 +233,7 @@ html, body {
     content: '';
     position: absolute;
     width: 3px;
-    height: 60px;
+    height: 70px;
     left: 50%;
     top: -50px;
     background: #141414;
@@ -239,7 +242,8 @@ html, body {
     font-family: 'Special Elite', monospace;
     font-size: 1.3em;
     max-width: 150px;
-    text-align: center; }
+    text-align: center;
+    line-height: 1.3em; }
     .hero_info_container .hero_info_box .rhcp_info_logo {
       width: 50px;
       height: 50px;
@@ -260,16 +264,63 @@ html, body {
   background-size: cover;
   background-position: center;
   z-index: 2;
-  top: 730px;
+  top: 650px;
   left: 50%;
-  transform: translateX(-50%);
-  -webkit-clip-path: polygon(9% 3%, 44% 3%, 80% 0, 96% 4%, 99% 12%, 96% 55%, 97% 83%, 77% 100%, 45% 95%, 16% 98%, 5% 87%, 2% 69%, 4% 39%, 1% 12%);
-  clip-path: polygon(9% 3%, 44% 3%, 80% 0, 96% 4%, 99% 12%, 96% 55%, 97% 83%, 77% 100%, 45% 95%, 16% 98%, 5% 87%, 2% 69%, 4% 39%, 1% 12%); }
+  transform: translateX(-50%); }
   .promo_video_outer .promo_video_container {
     position: absolute;
-    width: 60%;
-    height: 60%;
-    border: 3px solid #e62424;
+    width: 560px;
+    height: 315px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    .promo_video_outer .promo_video_container iframe {
+      width: 560px;
+      height: 315px; }
+
+.img_section_outer {
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  padding: 0;
+  margin: 0;
+  z-index: -1; }
+
+.img_container {
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+
+.flea_img {
+  background-image: url(../images/flea.png); }
+
+.anthony_img {
+  background-image: url(../images/anthony_kiedis.png); }
+
+.chad_img {
+  background-image: url(../images/chad_smith.png); }
+
+.josh_img {
+  background-image: url(../images/josh_klinghoffer.png);
+  background-position: top center; }
+
+.john_img {
+  background-image: url(../images/john_4_greyscale.png); }
+
+.info_float {
+  left: 10%; }
+
+.img_section_info {
+  position: absolute;
+  top: 2em;
+  right: 10%; }
+  .img_section_info h1 {
+    font-size: 5em;
+    padding: 0;
+    margin: 1em auto 0 auto; }
+  .img_section_info p {
+    font-size: 2em;
+    font-family: 'Special Elite',sans-serif; }
