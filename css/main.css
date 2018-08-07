@@ -56,7 +56,7 @@ html, body {
       height: 100%;
       margin: 0 auto;
       text-decoration: none;
-      font-size: 2em;
+      font-size: 1.5em;
       font-family: 'Special Elite',serif;
       transition: 350ms ease-in-out;
       text-decoration: none; }
@@ -66,8 +66,8 @@ html, body {
 @media (min-width: 800px) {
   #header_container {
     -webkit-clip-path: polygon(100% 0, 100% 100%, 56% 100%, 46% 78%, 28% 77%, 21% 93%, 9% 80%, 5% 90%, 0 86%, 0 0);
-    clip-path: polygon(100% 0, 100% 100%, 50% 100%, 46% 78%, 28% 77%, 21% 93%, 9% 80%, 5% 90%, 0 86%, 0 0);
-    background: rgba(0, 0, 0, 0.5); }
+    clip-path: polygon(100% 0, 100% 100%, 60% 100%, 46% 78%, 28% 77%, 21% 93%, 9% 80%, 5% 90%, 0 86%, 0 0);
+    background: rgba(0, 0, 0, 0.6); }
   .nav_container {
     position: absolute;
     height: 70px;
@@ -199,13 +199,12 @@ html, body {
 .rhcp_logo_container {
   position: absolute;
   width: 100%;
-  height: 30%;
+  height: 32%;
   z-index: 2;
   background-image: url(../images/rhcp_logo_svg.png);
   background-size: 250px 251px;
   background-position: center;
   background-repeat: no-repeat;
-  top: -10px;
   -webkit-animation: rotation 6s infinite linear;
   animation: rotation 6s infinite linear; }
 
@@ -254,8 +253,8 @@ html, body {
 
 .promo_video_outer {
   position: absolute;
-  width: 70%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 800px;
   height: 550px;
   margin: 0;
   padding: 0;
@@ -278,15 +277,48 @@ html, body {
       width: 560px;
       height: 315px; }
 
+@media (max-width: 800px) {
+  .hero_container {
+    height: 1100px; }
+  .promo_video_outer {
+    height: 300px;
+    width: 100%; }
+    .promo_video_outer .promo_video_container {
+      width: 90%;
+      height: 90%; }
+      .promo_video_outer .promo_video_container iframe {
+        width: 100%;
+        height: 100%; } }
+
+@media (max-width: 540px) {
+  .hero_overlay {
+    -webkit-clip-path: none;
+    clip-path: none; }
+  .rhcp_logo_container {
+    height: 201px;
+    top: 15%;
+    background-size: 200px 201px;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .hero_info_container {
+    top: 460px;
+    width: 85%; }
+    .hero_info_container .hero_info_box {
+      font-size: 1em; }
+      .hero_info_container .hero_info_box .rhcp_info_logo {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px; } }
+
 .img_section_outer {
   position: relative;
   width: 100vw;
   height: 500px;
   padding: 0;
-  margin: 0;
-  z-index: -1; }
+  margin: 0; }
 
 .img_container {
+  position: relative;
   width: 100%;
   height: 500px;
   background-repeat: no-repeat;
@@ -310,13 +342,15 @@ html, body {
 .john_img {
   background-image: url(../images/john_4_greyscale.png); }
 
-.info_float {
-  left: 10%; }
-
 .img_section_info {
+  display: block;
   position: absolute;
   top: 2em;
-  right: 10%; }
+  right: 10%;
+  text-align: right;
+  background: salmon;
+  width: auto;
+  text-align: left; }
   .img_section_info h1 {
     font-size: 5em;
     padding: 0;
@@ -324,3 +358,32 @@ html, body {
   .img_section_info p {
     font-size: 2em;
     font-family: 'Special Elite',sans-serif; }
+
+.info_float {
+  left: 10%; }
+
+@media (max-width: 620px) {
+  .img_section_outer {
+    height: 300px; }
+  .img_container {
+    background-attachment: unset;
+    height: 300px; }
+  .img_section_info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 330px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    width: 200px;
+    right: 20px;
+    top: 20px;
+    box-shadow: 3px 3px 0px 0px #e62424; }
+    .img_section_info h1 {
+      font-size: 1.5em; }
+    .img_section_info p {
+      font-size: 1em; }
+  .info_float {
+    left: 20px;
+    box-shadow: -3px -3px 0px 0px #e62424; } }

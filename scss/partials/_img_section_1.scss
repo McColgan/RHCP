@@ -4,9 +4,10 @@
     height: 500px;
     padding: 0;
     margin: 0;
-    z-index: -1;
+    //z-index: -1;
 }
 .img_container{
+    position: relative;
     width: 100%;
     height: 500px;
     background-repeat: no-repeat;
@@ -17,13 +18,9 @@
 }
 .flea_img{
     background-image: url(../images/flea.png);
-    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .anthony_img{
     background-image: url(../images/anthony_kiedis.png);
-    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    // clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 .chad_img{
     background-image: url(../images/chad_smith.png);
@@ -36,13 +33,16 @@
     background-image: url(../images/john_4_greyscale.png);
 }
 
-.info_float{
-    left: 10%;
-} 
+ 
 .img_section_info{
+    display: block;
     position: absolute;
     top: 2em;
     right: 10%;
+    text-align: right;
+    background: salmon;
+    width: auto;
+    text-align: left;
     h1{
         font-size: 5em;
         padding: 0;
@@ -51,5 +51,40 @@
     p{
         font-size: 2em;
         font-family: 'Special Elite',sans-serif;
+    }
+}
+.info_float{
+    left: 10%;
+}
+@media (max-width: 620px){
+    .img_section_outer{
+        height: 300px;
+    }
+    .img_container{
+        background-attachment: unset;
+        height: 300px;
+    }
+    .img_section_info{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 330px;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px;
+        width: 200px;
+        right: 20px;
+        top: 20px;
+        box-shadow: 3px 3px 0px 0px $color-red;
+        h1{
+            font-size: 1.5em;
+        }
+        p{
+            font-size: 1em;
+        }
+    }
+    .info_float{
+        left: 20px;
+        box-shadow: -3px -3px 0px 0px $color-red;
     }
 }
