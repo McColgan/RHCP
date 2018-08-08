@@ -168,7 +168,7 @@ html, body {
 .hero_container {
   position: relative;
   width: 100%;
-  height: 1400px;
+  height: 1250px;
   margin: 0;
   padding: 0;
   overflow: hidden; }
@@ -209,12 +209,6 @@ html, body {
   animation: rotation 6s infinite linear; }
 
 @keyframes rotation {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(359deg); } }
-
-@keyframes rotationLeft {
   from {
     transform: rotate(0deg); }
   to {
@@ -263,8 +257,8 @@ html, body {
 .promo_video_outer {
   position: absolute;
   width: 90%;
-  max-width: 800px;
-  height: 550px;
+  max-width: 600px;
+  height: 430px;
   margin: 0;
   padding: 0;
   background-image: url(../images/rhcp_bg_early.png);
@@ -279,14 +273,14 @@ html, body {
   clip-path: polygon(14% 0, 29% 4%, 86% 3%, 100% 10%, 100% 89%, 86% 100%, 60% 94%, 18% 99%, 0 90%, 0 7%); }
   .promo_video_outer .promo_video_container {
     position: absolute;
-    width: 560px;
-    height: 315px;
+    width: 100%;
+    height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
     .promo_video_outer .promo_video_container iframe {
-      width: 560px;
-      height: 315px; }
+      width: 100%;
+      height: 100%; }
 
 @media (max-width: 800px) {
   .hero_container {
@@ -349,7 +343,7 @@ html, body {
 
 .chad_img {
   background-image: url(../images/chad_smith.png);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7tvw));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
   z-index: 1; }
 
 .josh_img {
@@ -367,7 +361,8 @@ html, body {
   right: 10%;
   text-align: right;
   width: auto;
-  text-align: left; }
+  text-align: left;
+  z-index: 1; }
   .img_section_info h1 {
     font-size: 5em;
     padding: 0;
@@ -377,14 +372,16 @@ html, body {
     font-family: 'Special Elite',sans-serif; }
 
 .info_float {
-  left: 10%; }
+  left: 10%;
+  top: 0; }
 
 @media (max-width: 620px) {
   .img_section_outer {
     height: 300px; }
   .img_container {
     background-attachment: unset;
-    height: 300px; }
+    height: 300px;
+    clip-path: none; }
   .img_section_info {
     text-align: center;
     display: flex;
@@ -404,3 +401,10 @@ html, body {
   .info_float {
     left: 20px;
     box-shadow: -3px -3px 0px 0px #e62424; } }
+
+.gallery_hero_outer {
+  position: relative;
+  width: 100vw;
+  height: 800px;
+  margin: 0;
+  padding: 0; }
