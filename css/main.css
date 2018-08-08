@@ -349,7 +349,7 @@ html, body {
 
 .chad_img {
   background-image: url(../images/chad_smith.png);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7tvw));
   z-index: 1; }
 
 .josh_img {
