@@ -214,13 +214,20 @@ html, body {
   to {
     transform: rotate(359deg); } }
 
+@keyframes rotationLeft {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+
 .hero_info_container {
   z-index: 2;
   position: absolute;
   top: 420px;
   left: 50%;
   transform: translateX(-50%);
-  width: 450px;
+  width: 70%;
+  max-width: 600px;
   height: auto;
   background: #141414;
   display: flex;
@@ -249,7 +256,9 @@ html, body {
       background-image: url(../images/rhcp_logo_star.png);
       background-size: 50px 50px;
       background-repeat: no-repeat;
-      background-position: center; }
+      background-position: center;
+      -webkit-animation: rotation 6s infinite reverse linear;
+      animation: rotation 6s infinite reverse linear; }
 
 .promo_video_outer {
   position: absolute;
@@ -265,7 +274,9 @@ html, body {
   z-index: 2;
   top: 650px;
   left: 50%;
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+  -webkit-clip-path: polygon(14% 0, 29% 4%, 86% 3%, 100% 10%, 100% 89%, 86% 100%, 60% 94%, 18% 99%, 0 90%, 0 7%);
+  clip-path: polygon(14% 0, 29% 4%, 86% 3%, 100% 10%, 100% 89%, 86% 100%, 60% 94%, 18% 99%, 0 90%, 0 7%); }
   .promo_video_outer .promo_video_container {
     position: absolute;
     width: 560px;
@@ -324,20 +335,27 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  margin: 0; }
 
 .flea_img {
-  background-image: url(../images/flea.png); }
+  background-image: url(../images/flea.png);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
+  z-index: 1; }
 
 .anthony_img {
-  background-image: url(../images/anthony_kiedis.png); }
+  background-image: url(../images/anthony_kiedis.png);
+  margin-top: -7vw; }
 
 .chad_img {
-  background-image: url(../images/chad_smith.png); }
+  background-image: url(../images/chad_smith.png);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+  z-index: 1; }
 
 .josh_img {
   background-image: url(../images/josh_klinghoffer.png);
-  background-position: top center; }
+  background-position: top center;
+  margin-top: -7vw; }
 
 .john_img {
   background-image: url(../images/john_4_greyscale.png); }

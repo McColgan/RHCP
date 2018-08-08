@@ -14,20 +14,26 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    //margin-top: -70px;
+    margin: 0;
 }
 .flea_img{
     background-image: url(../images/flea.png);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vw), 0 100%);
+    z-index: 1;
 }
 .anthony_img{
     background-image: url(../images/anthony_kiedis.png);
+    margin-top: -7vw;
 }
 .chad_img{
     background-image: url(../images/chad_smith.png);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 7vw));
+    z-index: 1;
 }
 .josh_img{
     background-image: url(../images/josh_klinghoffer.png);
     background-position: top center;
+    margin-top: -7vw;
 }
 .john_img{
     background-image: url(../images/john_4_greyscale.png);
