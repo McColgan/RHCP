@@ -9,12 +9,13 @@
 .img_container{
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     margin: 0;
+    padding: 0;
 }
 .flea_img{
     background-image: url(../images/flea.png);
@@ -37,6 +38,7 @@
 }
 .john_img{
     background-image: url(../images/john_4_greyscale.png);
+    height: 600px;
 }
 
  
@@ -50,6 +52,16 @@
     width: auto;
     text-align: left;
     z-index: 1;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 65px;
+        left: -25px;
+        top: 95px;
+        background: $color-red;
+        transform: translateX(-50%);
+    }
     h1{
         font-size: 5em;
         padding: 0;
@@ -63,6 +75,50 @@
 .info_float{
     left: 10%;
     top: 0;
+}
+
+.the_band_cta_container{
+    box-sizing: border-box;
+    position: relative;
+    width: 100vw;
+    height: 450px;
+    background: $color-red;
+    padding: 1.5em 1em;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    clip-path: polygon(60% 0, 100% 30%, 100% 100%, 0 100%, 0 30%, 40% 0);
+    p{
+        font-size: 2em;
+        padding: 0.5em 0;
+        margin: 0 auto;
+    }
+    .the_band_cta{
+        font-size: 1.5em;
+        text-align: center;
+        border: 2px solid $color-white;
+        background: $color-red;
+        width: auto;
+        margin: 1em auto;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        cursor: pointer;
+        color: $color-white;
+        transition: 350ms ease-in-out;
+        &:hover{
+            background: rgba(20, 20, 20, 0.3);
+        }
+    }
+}
+
+// Media Queries
+@media (max-width: 850px){
+    .the_band_cta_container{
+        p{
+            font-size: 1.2em;
+        }
+    }
 }
 @media (max-width: 620px){
     .img_section_outer{
@@ -85,6 +141,9 @@
         right: 20px;
         top: 20px;
         box-shadow: 3px 3px 0px 0px $color-red;
+        &::before{
+            display: none;
+        }
         h1{
             font-size: 1.5em;
         }
@@ -96,4 +155,20 @@
         left: 20px;
         box-shadow: -3px -3px 0px 0px $color-red;
     }
+    .the_band_cta_container{
+        clip-path: none;
+    }
 }
+@media (max-width: 530px){
+    .the_band_cta_container{
+        p{
+            font-size: 0.8em;
+            margin: 0;
+            padding: 0;
+        }
+        .the_band_cta{
+            font-size: 1.2em;
+        }
+    }
+}
+  

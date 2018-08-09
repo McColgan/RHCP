@@ -6,7 +6,7 @@ html,body{
     width: 100%;
     height: auto;
     color: $color-white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: sans-serif;
     position: relative;
     background: $color-black;
 }
@@ -21,4 +21,8 @@ html,body{
     background-size: 150px 40px;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.color_red{
+    color: $color-red;
 }

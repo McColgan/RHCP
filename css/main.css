@@ -7,7 +7,7 @@ html, body {
   width: 100%;
   height: auto;
   color: #f3f3f3;
-  font-family: 'Montserrat', sans-serif;
+  font-family: sans-serif;
   position: relative;
   background: #141414; }
 
@@ -21,6 +21,9 @@ html, body {
   background-size: 150px 40px;
   background-repeat: no-repeat;
   background-position: center; }
+
+.color_red {
+  color: #e62424; }
 
 #header_container {
   position: fixed;
@@ -163,7 +166,38 @@ html, body {
 .footer_container {
   position: relative;
   width: 100vw;
-  height: 100px; }
+  height: auto;
+  text-align: center;
+  margin: 0;
+  padding: 3em 0; }
+  .footer_container h1 {
+    font-size: 2em;
+    margin: 0 auto;
+    padding: 0 0 0.25em 0;
+    font-family: 'Special Elite',sans-serif; }
+  .footer_container h2 {
+    font-size: 0.8em;
+    letter-spacing: 0.3em;
+    margin: 0 auto;
+    padding: 0 0 1em 0;
+    font-weight: 200;
+    color: #a0a0a0; }
+  .footer_container .footer_links_container {
+    margin: 0 auto; }
+    .footer_container .footer_links_container a {
+      text-decoration: none;
+      color: #f3f3f3;
+      margin: 0 2em;
+      font-size: 0.9em;
+      font-weight: 300;
+      transition: color 350ms ease-in-out; }
+      .footer_container .footer_links_container a:hover {
+        color: #e62424; }
+
+@media (max-width: 500px) {
+  .footer_container .footer_links_container a {
+    font-size: 0.8em;
+    margin: 1em; } }
 
 .hero_container {
   position: relative;
@@ -199,7 +233,7 @@ html, body {
 .rhcp_logo_container {
   position: absolute;
   width: 100%;
-  height: 32%;
+  height: 37%;
   z-index: 2;
   background-image: url(../images/rhcp_logo_svg.png);
   background-size: 250px 251px;
@@ -215,6 +249,7 @@ html, body {
     transform: rotate(359deg); } }
 
 .hero_info_container {
+  box-sizing: border-box;
   z-index: 2;
   position: absolute;
   top: 420px;
@@ -223,12 +258,13 @@ html, body {
   width: 70%;
   max-width: 600px;
   height: auto;
-  background: #141414;
+  background: rgba(20, 20, 20, 0.9);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  padding: 5px 0; }
+  padding: 5px 0;
+  border: 3px solid #e62424; }
   .hero_info_container::before {
     content: '';
     position: absolute;
@@ -236,7 +272,7 @@ html, body {
     height: 70px;
     left: 50%;
     top: -50px;
-    background: #141414;
+    background: #e62424;
     transform: translateX(-50%); }
   .hero_info_container .hero_info_box {
     font-family: 'Special Elite', monospace;
@@ -290,10 +326,7 @@ html, body {
     width: 100%; }
     .promo_video_outer .promo_video_container {
       width: 90%;
-      height: 90%; }
-      .promo_video_outer .promo_video_container iframe {
-        width: 100%;
-        height: 100%; } }
+      height: 90%; } }
 
 @media (max-width: 540px) {
   .hero_overlay {
@@ -325,12 +358,13 @@ html, body {
 .img_container {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 .flea_img {
   background-image: url(../images/flea.png);
@@ -352,7 +386,8 @@ html, body {
   margin-top: -7vw; }
 
 .john_img {
-  background-image: url(../images/john_4_greyscale.png); }
+  background-image: url(../images/john_4_greyscale.png);
+  height: 600px; }
 
 .img_section_info {
   display: block;
@@ -363,6 +398,15 @@ html, body {
   width: auto;
   text-align: left;
   z-index: 1; }
+  .img_section_info::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 65px;
+    left: -25px;
+    top: 95px;
+    background: #e62424;
+    transform: translateX(-50%); }
   .img_section_info h1 {
     font-size: 5em;
     padding: 0;
@@ -374,6 +418,41 @@ html, body {
 .info_float {
   left: 10%;
   top: 0; }
+
+.the_band_cta_container {
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 450px;
+  background: #e62424;
+  padding: 1.5em 1em;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  clip-path: polygon(60% 0, 100% 30%, 100% 100%, 0 100%, 0 30%, 40% 0); }
+  .the_band_cta_container p {
+    font-size: 2em;
+    padding: 0.5em 0;
+    margin: 0 auto; }
+  .the_band_cta_container .the_band_cta {
+    font-size: 1.5em;
+    text-align: center;
+    border: 2px solid #f3f3f3;
+    background: #e62424;
+    width: auto;
+    margin: 1em auto;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    cursor: pointer;
+    color: #f3f3f3;
+    transition: 350ms ease-in-out; }
+    .the_band_cta_container .the_band_cta:hover {
+      background: rgba(20, 20, 20, 0.3); }
+
+@media (max-width: 850px) {
+  .the_band_cta_container p {
+    font-size: 1.2em; } }
 
 @media (max-width: 620px) {
   .img_section_outer {
@@ -394,17 +473,30 @@ html, body {
     right: 20px;
     top: 20px;
     box-shadow: 3px 3px 0px 0px #e62424; }
+    .img_section_info::before {
+      display: none; }
     .img_section_info h1 {
       font-size: 1.5em; }
     .img_section_info p {
       font-size: 1em; }
   .info_float {
     left: 20px;
-    box-shadow: -3px -3px 0px 0px #e62424; } }
+    box-shadow: -3px -3px 0px 0px #e62424; }
+  .the_band_cta_container {
+    clip-path: none; } }
+
+@media (max-width: 530px) {
+  .the_band_cta_container p {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0; }
+  .the_band_cta_container .the_band_cta {
+    font-size: 1.2em; } }
 
 .gallery_hero_outer {
   position: relative;
   width: 100vw;
   height: 800px;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background: #797373; }
