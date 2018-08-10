@@ -176,7 +176,7 @@ html, body {
     padding: 0 0 0.25em 0;
     font-family: 'Special Elite',sans-serif; }
   .footer_container h2 {
-    font-size: 0.8em;
+    font-size: 0.7em;
     letter-spacing: 0.3em;
     margin: 0 auto;
     padding: 0 0 1em 0;
@@ -430,7 +430,7 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  clip-path: polygon(60% 0, 100% 15%, 100% 100%, 0 100%, 0 15%, 40% 0); }
+  clip-path: polygon(52.5% 0, 100% 15%, 100% 100%, 0 100%, 0 15%, 47.5% 0); }
   .the_band_cta_container p {
     font-size: 2em;
     padding: 0.5em 0;
@@ -502,6 +502,7 @@ html, body {
   background: #141414; }
 
 .hero_grid_container {
+  box-sizing: border-box;
   display: grid;
   width: 80%;
   max-width: 1000px;
@@ -510,17 +511,18 @@ html, body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   overflow: hidden;
-  grid-gap: 20px 10px; }
+  background: #e62424;
+  grid-gap: 5px 5px;
+  border: 5px solid #e62424; }
 
 .hero_grid_box {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transition: 350ms ease-in-out;
-  border: 3px solid #e62424; }
+  transition: 300ms ease-in-out; }
   .hero_grid_box:hover {
-    transform: scale(0.95); }
+    opacity: 0.6; }
 
 .hero_grid_1 {
   grid-area: 1 / 1 / 3 / 2;
@@ -541,7 +543,7 @@ html, body {
 .hero_grid_5 {
   grid-area: 3 / 2 / 5 / 3;
   background-image: url(../images/rhcp_bg_6.png);
-  background-position: top -50px center; }
+  background-position: top -70px center; }
 
 .hero_grid_6 {
   grid-area: 5 / 2 / 7 / 3;
@@ -554,18 +556,43 @@ html, body {
   align-items: center;
   border: none; }
   .hero_grid_7:hover {
-    transform: scale(1); }
+    opacity: 1; }
   .hero_grid_7 .gallery_cta {
     font-size: 1.5em;
     text-align: center;
     border: 2px solid #f3f3f3;
-    background: #e62424;
     width: auto;
     margin: 1em auto;
     padding: 0.5em 2em;
     text-decoration: none;
     cursor: pointer;
     color: #f3f3f3;
-    transition: 350ms ease-in-out; }
+    transition: 300ms ease-in-out; }
     .hero_grid_7 .gallery_cta:hover {
-      background: rgba(230, 36, 36, 0.6); }
+      background: rgba(20, 20, 20, 0.3); }
+
+@media (max-width: 768px) {
+  .hero_grid_container {
+    grid-gap: 0px 0px;
+    border: none;
+    width: 100%; }
+  .hero_grid_1 {
+    grid-area: 5 / 1 / 7 / 3; }
+  .hero_grid_2 {
+    grid-area: 3 / 1 / 5 / 1; }
+  .hero_grid_3 {
+    grid-area: 7 / 2 / 7 / 3; }
+  .hero_grid_4 {
+    grid-area: 1 / 1 / 3 / 3; }
+  .hero_grid_5 {
+    grid-area: 3 / 2 / 5 / 3;
+    background-position: top 0 center; }
+  .hero_grid_6 {
+    grid-area: 7 / 2 / 7 / 1; }
+  .hero_grid_7 {
+    grid-area: 7 / 2 / 8 / 3; }
+    .hero_grid_7 .gallery_cta {
+      font-size: 1.1em;
+      padding: 0.25em 1em; }
+      .hero_grid_7 .gallery_cta:hover {
+        background: rgba(230, 36, 36, 0.6); } }
