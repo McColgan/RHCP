@@ -1,0 +1,86 @@
+.disclaimer_header_container{
+    position: relative;
+    margin: 0;
+    padding-top: 100px;
+    top: 0;
+    width: 100vw;
+    height: 500px;
+    background-image: url(../images/rhcp_bg_3.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    .disclaimer_header{
+        padding: 20px;
+        display: inline;
+        position: relative;
+        font-size: 10em;
+        margin: 0 0 0 0.5em;
+        background: rgba(0, 0, 0, 0.7);
+        &::before{
+            position: absolute;
+            content: 'Disclaimer';
+            font-size: 6rem;
+            color: $color-red;
+            //top: 0.8em;
+            //left: 0.5em;
+        }
+    }
+
+}
+.disclaimer_content_container{
+    box-sizing: border-box;
+    position: relative;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 3em;
+    h2{
+        font-size: 1.8em;
+        font-weight: 400;
+        margin: 2em 10% 0 10%;
+    }
+    p{
+        font-size: 1.1em;
+        font-weight: 200;
+        font-family: 'Special Elite',sans-serif;
+        margin: 1em 10% 3em 10%;
+        line-height: 1.5em;
+        a{
+            text-decoration: none;
+            color: $color-red;
+        }    
+    }
+}
+@media (max-width: 1000px){
+    .disclaimer_header_container{
+        background-attachment: initial;
+        height: 350px;
+        .disclaimer_header{
+            font-size: 6em;
+            &::before{
+                font-size: 3.6rem;
+            }
+        }
+    }
+}
+@media (max-width: 600px){
+    .disclaimer_header_container{
+        height: 350px;
+        .disclaimer_header{
+            font-size: 3em;
+            &::before{
+                font-size: 1.8rem;
+            }
+        }
+    }
+    .disclaimer_content_container{
+        padding: 1em;
+        h2{
+            font-size: 1.2em;
+        }
+        p{
+            font-size: 0.9em;
+        }
+    }
+}
