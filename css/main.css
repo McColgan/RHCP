@@ -169,7 +169,8 @@ html, body {
   height: auto;
   text-align: center;
   margin: 0;
-  padding: 3em 0; }
+  padding: 3em 0;
+  z-index: 1; }
   .footer_container h1 {
     font-size: 2em;
     margin: 0 auto;
@@ -663,3 +664,80 @@ html, body {
       font-size: 1.2em; }
     .disclaimer_content_container p {
       font-size: 0.9em; } }
+
+.theBand_video_container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 100vw;
+  height: 45vw;
+  margin: 0;
+  padding: 0; }
+  .theBand_video_container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.theBand_content_container {
+  top: 45vw;
+  z-index: 1;
+  position: relative;
+  width: 100vw;
+  height: 1000px;
+  padding: 0;
+  margin: 0;
+  background: #141414; }
+  .theBand_content_container h1 {
+    width: 90%;
+    max-width: 1200px;
+    font-size: 2em;
+    margin: 0 auto;
+    padding: 3em 0;
+    font-weight: 700;
+    letter-spacing: 0.6em; }
+  .theBand_content_container .summary_text_container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; }
+    .theBand_content_container .summary_text_container p {
+      position: relative;
+      font-size: 1em;
+      font-weight: 200;
+      margin: 0;
+      width: 33.3%;
+      padding-bottom: 3em; }
+      .theBand_content_container .summary_text_container p::before {
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 100px;
+        background-color: #e62424;
+        transform: rotate(90deg);
+        bottom: -1em;
+        left: 3em; }
+    .theBand_content_container .summary_text_container p:first-of-type {
+      width: 25%; }
+    .theBand_content_container .summary_text_container p:nth-of-type(even) {
+      width: 28%; }
+
+@media (max-width: 750px) {
+  .theBand_content_container h1 {
+    font-size: 1em; }
+  .theBand_content_container .summary_text_container {
+    flex-direction: column; }
+    .theBand_content_container .summary_text_container p {
+      width: 80%; }
+    .theBand_content_container .summary_text_container p:first-of-type {
+      width: 80%; }
+    .theBand_content_container .summary_text_container p:nth-of-type(even) {
+      width: 80%; } }
