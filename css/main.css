@@ -170,7 +170,8 @@ html, body {
   text-align: center;
   margin: 0;
   padding: 3em 0;
-  z-index: 1; }
+  z-index: 1;
+  background: #141414; }
   .footer_container h1 {
     font-size: 2em;
     margin: 0 auto;
@@ -665,30 +666,35 @@ html, body {
     .disclaimer_content_container p {
       font-size: 0.9em; } }
 
-.theBand_video_container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
+.theBand_video_outer {
+  position: relative;
   width: 100vw;
   height: 45vw;
   margin: 0;
   padding: 0; }
-  .theBand_video_container iframe {
-    position: absolute;
+  .theBand_video_outer .theBand_video_container {
+    position: fixed;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%; }
+    z-index: 0;
+    width: 100vw;
+    height: 45vw;
+    margin: 0;
+    padding: 0; }
+    .theBand_video_outer .theBand_video_container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
 
 .theBand_content_container {
-  top: 45vw;
   z-index: 1;
   position: relative;
   width: 100vw;
-  height: 1000px;
+  height: auto;
   padding: 0;
   margin: 0;
   background: #141414; }
@@ -699,7 +705,8 @@ html, body {
     margin: 0 auto;
     padding: 3em 0;
     font-weight: 700;
-    letter-spacing: 0.6em; }
+    letter-spacing: 0.6em;
+    font-family: 'Special Elite',sans-serif; }
   .theBand_content_container .summary_text_container {
     box-sizing: border-box;
     display: flex;
@@ -713,7 +720,7 @@ html, body {
       position: relative;
       font-size: 1em;
       font-weight: 200;
-      margin: 0;
+      margin: 0 0 3em 0;
       width: 33.3%;
       padding-bottom: 3em; }
       .theBand_content_container .summary_text_container p::before {
@@ -729,6 +736,112 @@ html, body {
       width: 25%; }
     .theBand_content_container .summary_text_container p:nth-of-type(even) {
       width: 28%; }
+
+.album_art_outer {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  background: #141414;
+  padding: 100px 0;
+  margin: -20px auto 0 auto; }
+  .album_art_outer .album_art_container {
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto; }
+    .album_art_outer .album_art_container .album_art_box {
+      position: relative;
+      box-sizing: border-box;
+      width: 300px;
+      height: 300px;
+      padding: 1em;
+      margin: 1em;
+      background: #e62424;
+      overflow: hidden;
+      border: 2px solid #e62424;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center; }
+      .album_art_outer .album_art_container .album_art_box .album_art {
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        transition: 300ms ease-in-out; }
+        .album_art_outer .album_art_container .album_art_box .album_art:hover {
+          transform: scale(1.1);
+          opacity: 0.1; }
+      .album_art_outer .album_art_container .album_art_box h1 {
+        font-size: 2em;
+        font-weight: 600; }
+      .album_art_outer .album_art_container .album_art_box p {
+        font-size: 1.5em;
+        font-weight: 400;
+        font-family: 'Special Elite',sans-serif; }
+      .album_art_outer .album_art_container .album_art_box .rhcp_debut {
+        background-image: url(../images/rhcp_album_art_rhcp.png); }
+      .album_art_outer .album_art_container .album_art_box .freaky_styley {
+        background-image: url(../images/rhcp_album_art_freaky_styley.png); }
+      .album_art_outer .album_art_container .album_art_box .the_uplift {
+        background-image: url(../images/rhcp_album_art_the_uplift.png); }
+      .album_art_outer .album_art_container .album_art_box .mothers_milk {
+        background-image: url(../images/rhcp_album_art_mothers_milk.png); }
+      .album_art_outer .album_art_container .album_art_box .magik {
+        background-image: url(../images/rhcp_album_art_magik.png); }
+      .album_art_outer .album_art_container .album_art_box .what_hits {
+        background-image: url(../images/rhcp_album_art_what_hits.png); }
+      .album_art_outer .album_art_container .album_art_box .plasma_shaft {
+        background-image: url(../images/rhcp_album_art_plasma.png); }
+      .album_art_outer .album_art_container .album_art_box .out_in_la {
+        background-image: url(../images/rhcp_album_art_out_in_la.png); }
+      .album_art_outer .album_art_container .album_art_box .one_hot_minute {
+        background-image: url(../images/rhcp_album_art_one_hot_minute.png); }
+      .album_art_outer .album_art_container .album_art_box .under_the_covers {
+        background-image: url(../images/rhcp_album_art_under_the_covers.png); }
+      .album_art_outer .album_art_container .album_art_box .teatro_sessions {
+        background-image: url(../images/rhcp_album_art_teatro_sessions.png); }
+      .album_art_outer .album_art_container .album_art_box .the_abbey_road_ep {
+        background-image: url(../images/rhcp_album_art_the_abbey_road_ep.png); }
+      .album_art_outer .album_art_container .album_art_box .give_it_away_ep {
+        background-image: url(../images/rhcp_album_art_give_it_away_ep.png); }
+      .album_art_outer .album_art_container .album_art_box .californication {
+        background-image: url(../images/rhcp_album_art_californication.png); }
+      .album_art_outer .album_art_container .album_art_box .californication_b_side {
+        background-image: url(../images/rhcp_album_art_californication_b_side.png); }
+      .album_art_outer .album_art_container .album_art_box .by_the_way {
+        background-image: url(../images/rhcp_album_art_by_the_way.png); }
+      .album_art_outer .album_art_container .album_art_box .by_the_way_b_side {
+        background-image: url(../images/rhcp_album_art_by_the_way_b_side.png); }
+      .album_art_outer .album_art_container .album_art_box .greatest_hits {
+        background-image: url(../images/rhcp_album_art_greatest_hits.png); }
+      .album_art_outer .album_art_container .album_art_box .hyde_park {
+        background-image: url(../images/rhcp_album_art_hyde_park.png); }
+      .album_art_outer .album_art_container .album_art_box .stadium_arcadium {
+        background-image: url(../images/rhcp_album_art_stadium_arcadium.png); }
+      .album_art_outer .album_art_container .album_art_box .im_with_you {
+        background-image: url(../images/rhcp_album_art_im_with_you.png); }
+      .album_art_outer .album_art_container .album_art_box .venus {
+        background-image: url(../images/rhcp_album_art_venus.png); }
+      .album_art_outer .album_art_container .album_art_box .hall_of_fame {
+        background-image: url(../images/rhcp_album_art_hall_of_fame.png); }
+      .album_art_outer .album_art_container .album_art_box .im_with_you_sessions {
+        background-image: url(../images/rhcp_album_art_im_with_you_sessions.png); }
+      .album_art_outer .album_art_container .album_art_box .the_getaway {
+        background-image: url(../images/rhcp_album_art_the_getaway.png); }
 
 @media (max-width: 750px) {
   .theBand_content_container h1 {

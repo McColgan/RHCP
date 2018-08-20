@@ -2,11 +2,11 @@
     position: relative;
     width: 100vw;
     height: auto;
-    //background: salmon;
     text-align: center;
     margin: 0;
     padding: 3em 0;
     z-index: 1;
+    background: $color-black;
     h1{
         font-size: 2em;
         margin: 0 auto;
@@ -39,6 +39,7 @@
         }
     }
 }
+
 
 // Media Queries
 @media (max-width: 500px){

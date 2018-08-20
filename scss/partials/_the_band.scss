@@ -1,30 +1,37 @@
-.theBand_video_container{
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
+.theBand_video_outer{
+    position: relative;
     width: 100vw;
     height: 45vw;
     margin: 0;
     padding: 0;
-    //background: salmon;
-    iframe{
-        position: absolute;
+    .theBand_video_container{
+        position: fixed;
         top: 0;
+        right: 0;
+        bottom: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        z-index: 0;
+        width: 100vw;
+        height: 45vw;
+        margin: 0;
+        padding: 0;
+        //background: salmon;
+        iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
 .theBand_content_container{
-    top: 45vw;
+    
     z-index: 1;
     position: relative;
     width: 100vw;
-    height: 1000px;
+    height: auto;
     padding: 0;
     margin: 0;
     background: $color-black;
@@ -39,6 +46,7 @@
         letter-spacing: 0.6em;
         //background: saddlebrown;
         //display: inline-block;
+        font-family: 'Special Elite',sans-serif;
     }
     .summary_text_container{
         box-sizing: border-box;
@@ -54,7 +62,7 @@
             position: relative;
             font-size: 1em;
             font-weight: 200;
-            margin: 0;
+            margin: 0 0 3em 0;
             width: 33.3%;
             padding-bottom: 3em;
             &::before{
@@ -76,6 +84,157 @@
         }
     }
 }
+
+// Art work container
+.album_art_outer{
+    position: relative;
+    width: 100vw;
+    height: auto;
+    background: $color-black;
+    padding: 100px 0;
+    margin: -20px auto 0 auto;
+    .album_art_container{
+        //background: saddlebrown;
+        width: 90%;
+        max-width: 1000px;
+        height: auto;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 auto;
+        .album_art_box{
+            position: relative;
+            box-sizing: border-box;
+            width: 300px;
+            height: 300px;
+            padding: 1em;
+            margin: 1em;
+            background: $color-red;
+            overflow: hidden;
+            border: 2px solid $color-red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            .album_art{
+                position: absolute;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                transition: 300ms ease-in-out;
+                &:hover{
+                    transform: scale(1.1);
+                    opacity: 0.1;
+                }
+            }
+            h1{
+                font-size: 2em;
+                font-weight: 600;
+            }
+            p{
+                font-size: 1.5em;
+                font-weight: 400;
+                font-family: 'Special Elite',sans-serif;
+            }
+            .rhcp_debut{
+                background-image: url(../images/rhcp_album_art_rhcp.png);
+            }
+            .freaky_styley{
+                background-image: url(../images/rhcp_album_art_freaky_styley.png);
+            }
+            .the_uplift{
+                background-image: url(../images/rhcp_album_art_the_uplift.png);
+            }
+            .mothers_milk{
+                background-image: url(../images/rhcp_album_art_mothers_milk.png);
+            }
+            .magik{
+                background-image: url(../images/rhcp_album_art_magik.png);
+            }
+            .what_hits{
+                background-image: url(../images/rhcp_album_art_what_hits.png);
+            }
+            .plasma_shaft{
+                background-image: url(../images/rhcp_album_art_plasma.png);
+            }
+            .out_in_la{
+                background-image: url(../images/rhcp_album_art_out_in_la.png);
+            }
+            .one_hot_minute{
+                background-image: url(../images/rhcp_album_art_one_hot_minute.png);
+            }
+            .under_the_covers{
+                background-image: url(../images/rhcp_album_art_under_the_covers.png);
+            }
+            .teatro_sessions{
+                background-image: url(../images/rhcp_album_art_teatro_sessions.png);
+            }
+            .the_abbey_road_ep{
+                background-image: url(../images/rhcp_album_art_the_abbey_road_ep.png);
+            }
+            .give_it_away_ep{
+                background-image: url(../images/rhcp_album_art_give_it_away_ep.png);
+            }
+            .californication{
+                background-image: url(../images/rhcp_album_art_californication.png);
+            }
+            .californication_b_side{
+                background-image: url(../images/rhcp_album_art_californication_b_side.png);
+            }
+            .by_the_way{
+                background-image: url(../images/rhcp_album_art_by_the_way.png);
+            }
+            .by_the_way_b_side{
+                background-image: url(../images/rhcp_album_art_by_the_way_b_side.png);
+            }
+            .greatest_hits{
+                background-image: url(../images/rhcp_album_art_greatest_hits.png);
+            }
+            .hyde_park{
+                background-image: url(../images/rhcp_album_art_hyde_park.png);
+            }
+            .stadium_arcadium{
+                background-image: url(../images/rhcp_album_art_stadium_arcadium.png);
+            }
+            .im_with_you{
+                background-image: url(../images/rhcp_album_art_im_with_you.png);
+            }
+            .venus{
+                background-image: url(../images/rhcp_album_art_venus.png);
+            }
+            .hall_of_fame{
+                background-image: url(../images/rhcp_album_art_hall_of_fame.png);
+            }
+            .im_with_you_sessions{
+                background-image: url(../images/rhcp_album_art_im_with_you_sessions.png);
+            }
+            .the_getaway{
+                background-image: url(../images/rhcp_album_art_the_getaway.png);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
