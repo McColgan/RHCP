@@ -1,3 +1,4 @@
+// Video container
 .theBand_video_outer{
     position: relative;
     width: 100vw;
@@ -26,8 +27,8 @@
     }
 }
 
+// Summary container
 .theBand_content_container{
-    
     z-index: 1;
     position: relative;
     width: 100vw;
@@ -85,16 +86,109 @@
     }
 }
 
+// Band Members
+.band_members_outer{
+    position: relative;
+    width: 100vw;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    background: $color-black;
+    h1{
+        font-size: 3em;
+        font-weight: 600;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .band_members_container{
+        width: 90%;
+        height: auto;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3em 0;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        //background: salmon;
+        .band_member_box{
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+            width: 230px;
+            height: 230px;
+            background: $color-red;
+            //padding: 1em;
+            margin: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid $color-red;
+            .band_member_img{
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: 300ms ease-in-out;
+                &:hover{
+                    transform: scale(1.1);
+                    opacity: 0.1;
+                }
+            }
+            .anthony_kiedis_profile{
+                background-image: url(../images/anthony_kiedis_profile.jpg);
+            }
+            .flea_profile{
+                background-image: url(../images/flea_profile.jpg);
+            }
+            .chad_smith_profile{
+                background-image: url(../images/chad_smith_profile.jpg);
+            }
+            .josh_klinghoffer_profile{
+                background-image: url(../images/josh_klinghoffer_profile.jpg);
+            }
+            .john_frusciante_profile{
+                background-image: url(../images/john_frusciante_profile.jpg);
+            }
+            .dave_navarro_profile{
+                background-image: url(../images/dave_navarro_profile.jpg);
+            }
+            .jack_irons_profile{
+                background-image: url(../images/jack_irons_profile.jpg);
+            }
+            .hillel_slovak_profile{
+                background-image: url(../images/hillel_slovak_profile.jpg);
+            }
+            .cliffe_martinez_profile{
+                background-image: url(../images/cliffe_martinez_profile.png);
+            }
+            h2{
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+
 // Art work container
 .album_art_outer{
     position: relative;
     width: 100vw;
     height: auto;
-    background: $color-black;
+    background: $color-red; /* old browsers*/
+    background-image: url(../images/rhcp_artwork_bg.jpg);
+    background-attachment: fixed;
     padding: 100px 0;
     margin: -20px auto 0 auto;
+    z-index: 0;
     .album_art_container{
-        //background: saddlebrown;
+        background: $color-black; /* old browsers*/
+        background: linear-gradient(to left, #141414 0%,#141414 50%,#f3f3f3 50%,#f3f3f3 100%);
         width: 90%;
         max-width: 1000px;
         height: auto;
@@ -104,6 +198,7 @@
         justify-content: space-evenly;
         align-items: center;
         margin: 0 auto;
+        z-index: 2;
         .album_art_box{
             position: relative;
             box-sizing: border-box;
@@ -113,7 +208,7 @@
             margin: 1em;
             background: $color-red;
             overflow: hidden;
-            border: 2px solid $color-red;
+            border: 5px solid $color-red;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -224,17 +319,6 @@
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
