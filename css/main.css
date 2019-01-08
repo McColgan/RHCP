@@ -745,7 +745,7 @@ html, body {
   margin: 0;
   background: #141414; }
   .band_members_outer h1 {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 600;
     width: 90%;
     max-width: 1200px;
@@ -764,10 +764,10 @@ html, body {
       overflow: hidden;
       position: relative;
       box-sizing: border-box;
-      width: 230px;
-      height: 230px;
+      width: 250px;
+      height: 250px;
       background: #e62424;
-      margin: 1em;
+      margin: 0.5em;
       display: flex;
       justify-content: center;
       align-items: center;
